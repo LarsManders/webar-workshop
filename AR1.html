@@ -22,6 +22,29 @@
   <!-- In dit beginbestand is het scherm nog leeg (geen randen/marges).  -->
   <!-- Vanaf STAP 2 voeg je hier knoppen en panelen toe.                  -->
   <!-- ================================================================= -->
+      /* [OPDRACHT 2] Knoppenbalk onderaan het scherm */
+    #controls {
+      position: fixed;          /* vast op het scherm, ook als je beweegt */
+      bottom: 20px;             /* 20 pixels vanaf de onderkant */
+      left: 50%;
+      transform: translateX(-50%);  /* horizontaal centreren */
+      display: flex;
+      gap: 12px;                /* ruimte tussen de knoppen */
+      z-index: 1000;            /* zorg dat knoppen bovenop het camerabeeld liggen */
+    }
+    .btn {
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .btn:active { transform: scale(0.95); }
+    #btn-groen { background: #00aa00; }
+    #btn-rood  { background: #cc0000; }
   <style>
     body {
       margin: 0;
